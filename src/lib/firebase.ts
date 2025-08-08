@@ -2,24 +2,25 @@
 
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 
 // Optional: import other services like Firestore, Storage, etc., if needed
 // import { getFirestore } from "firebase/firestore";
 // import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  // measurementId is optional; add only if needed
+  apiKey: "AIzaSyCLFkRYtzBbChb84TDiu7daFrE8ehYaJ9A",
+  authDomain: "yelloskye-f8262.firebaseapp.com",
+  projectId: "yelloskye-f8262",
+  storageBucket: "yelloskye-f8262.firebasestorage.app",
+  messagingSenderId: "873713946725",
+  appId: "1:873713946725:web:f5c745407a441756ef368c",
+  measurementId: "G-2091MQGPQC"
 };
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
+const analytics = getAnalytics(app);
 // Optional: initialize analytics only on the client side
 // let analytics;
 // if (typeof window !== "undefined") {
